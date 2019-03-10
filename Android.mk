@@ -17,6 +17,8 @@ LOCAL_STATIC_ANDROID_LIBRARIES := \
     android-support-v7-preference \
     android-support-v7-recyclerview
 
+LOCAL_AAPT_FLAGS += --rename-manifest-package com.havoc.updater
+
 LOCAL_RESOURCE_DIR := \
     $(LOCAL_PATH)/res
 
