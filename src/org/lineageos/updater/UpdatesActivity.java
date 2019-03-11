@@ -122,12 +122,18 @@ public class UpdatesActivity extends UpdatesListActivity {
         getSupportActionBar().setDisplayShowTitleEnabled(false);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        TextView headerTitle = (TextView) findViewById(R.id.header_title);
-        headerTitle.setText(getString(R.string.header_title_text));
+        //TextView headerTitle = (TextView) findViewById(R.id.header_title);
+        //headerTitle.setText(getString(R.string.header_title_text, BuildInfoUtils.getBuildVersion()));
 
-        TextView headerVersion = (TextView) findViewById(R.id.header_build_version);
-        headerVersion.setText(SystemProperties.get(Constants.PROP_BUILD_VERSION) + " ● " +
-                    SystemProperties.get(Constants.PROP_DEVICE));
+        TextView headerTitle = (TextView) findViewById(R.id.header_title);
+        headerTitle.setText(getString(R.string.header_title_text) + " • " + SystemProperties.get(Constants.PROP_BUILD_VERSION));
+
+        TextView headerBuildVersion = (TextView) findViewById(R.id.header_build_version);
+        headerBuildVersion.setText(getString(R.string.header_android_version, Build.VERSION.RELEASE));
+
+        TextView headerBuildDate = (TextView) findViewById(R.id.header_build_date);
+        headerBuildDate.setText(StringGenerator.getDateLocalizedUTC(this,
+                DateFormat.LONG, BuildInfoUtils.getBuildDateTimestamp()));
 
 
         // Switch between header title and appbar title minimizing overlaps
