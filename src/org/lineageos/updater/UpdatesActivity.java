@@ -492,8 +492,8 @@ public class UpdatesActivity extends UpdatesListActivity {
 
         controller.setUpdatesAvailableOnline(updatesOnline, false);
 
-        controller.verifyUpdateAsync(localUpdate.getDownloadId());
-        controller.notifyUpdateChange(localUpdate.getDownloadId());
+        //controller.verifyUpdateAsync(localUpdate.getDownloadId());
+        //controller.notifyUpdateChange(localUpdate.getDownloadId());
 
         List<String> updateIds = new ArrayList<>();
         List<UpdateInfo> sortedUpdates = controller.getUpdates();
