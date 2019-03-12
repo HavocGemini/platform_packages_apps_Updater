@@ -10,4 +10,7 @@
     <color name="update_background">#fafafa</color>
     <color name="ic_background">#333333</color>
     <color name="fab_bgtint">#e0e0e0</color>
+    <color name="app_title_text_color">#de000000</color>
+    <color name="card_update_bg">#ffffff</color>
+    <color name="popup_bg">@color/card_update_bg</color>
 </resources>
