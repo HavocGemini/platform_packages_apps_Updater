@@ -7,5 +7,4 @@
     <color name="card_update_bg">#151618</color>
     <color name="popup_bg">@color/card_update_bg</color>
     <color name="inverted">#f5f5f5</color>
-    <color name="update_background">#212121</color>
 </resources>
